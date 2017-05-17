@@ -1,5 +1,12 @@
 $(document).ready(function(){
-  // call functions here
+  addToList()
 });
 
-// define functions here
+function addToList() {
+  $('form').on('submit', (event) => {
+    var item = $('#item').val();
+      $('ol').append('<li>' + item + '</li>' )
+      event.preventDefault();
+    }
+  )
+}
