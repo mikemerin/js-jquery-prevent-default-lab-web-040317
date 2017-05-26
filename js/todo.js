@@ -1,9 +1,9 @@
 $(document).ready(function(){
-  addToList()
+  submitForm()
 });
 
-function addToList() {
-  $('form').on('submit', (event) => {
+function submitForm() {
+  $('form').on('submit', function(event) {
     var item = $('#item').val();
       $('ol').append('<li>' + item + '</li>' )
       event.preventDefault();
